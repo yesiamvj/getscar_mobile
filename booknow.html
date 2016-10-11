@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Book a new Ride</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://jqueryui.com/datepicker/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          
+        <script>
+        $( function() {
+          $( "#fromDatePicker" ).datepicker();
+           $( "#toDatePicker" ).datepicker();
+        } );
+        </script>
     </head>
     <body>
         <div class="pageHoldr">
             <div class="pageHeadr">
                 <header>
+                    
                     <div class="pageTtl">
                         <div class="pageLogo" style="background-image: url(icos/logo_100.jpg)"></div>  
                         <div class="pageBrand">GetsCar</div>
@@ -27,31 +39,92 @@
                     <div class="formHoldr">
                         <div class="formItm">
                             <div class="formLbl">
-                                Username
+                                From
                             </div>
                             <div class="formField">
-                                <input class="inp_txt_form" type="date" />
+                                <input class="inp_txt_form" id="fromDatePicker" type="text" placeholder="Select"/>
+                            </div>
+                            <div class="formTimeHoldr">
+                                <span class="timeSelTxt">
+                                    Pickup Time
+                                </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <select>
+                                    <option>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                    <option>45</option>
+                                </select>
+                                <select>
+                                    <option>AM</option>
+                                    <option>PM</option>
+                                   
+                                </select>
                             </div>
                         </div>
                         <div class="formItm">
                             <div class="formLbl">
-                                Password
+                                To
                             </div>
                             <div class="formField">
-                                <input class="inp_txt_form" type="password" placeholder="***"/>
+                                <input class="inp_txt_form" id="toDatePicker" type="text" placeholder="Select" />
+                            </div>
+                            <div class="formTimeHoldr">
+                                <span class="timeSelTxt">
+                                    Return Time
+                                </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <select>
+                                    <option>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                    <option>45</option>
+                                </select>
+                                <select>
+                                    <option>AM</option>
+                                    <option>PM</option>
+                                   
+                                </select>
                             </div>
                         </div>
+                        
                         <div class="formSubmit">
-                            <input class="inp_sbmt_form btn_login" type="submit" value="Login"/>
+                            <input class="inp_sbmt_form btn_login btn_full" type="submit" value="Proceed"/>
                         </div>
                     </div>
                     <div class="alterHoldr">
                         <div class="altrTxt">
-                            New user ?
+                           Or
                         </div>
                         <div class="altrLinkHolr">
                             <button class="btn_reg">
-                                Register Now
+                                Browse Cars
                             </button>
                         </div>
                     </div>
